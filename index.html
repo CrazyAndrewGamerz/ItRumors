@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkyronTech Nieuws</title>
+  <title>ITRumors</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -26,51 +26,83 @@
     }
     .container {
       padding: 40px 20px;
-      max-width: 900px;
+      max-width: 1200px;
       margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
     }
     article {
-      margin-bottom: 40px;
-      padding: 20px;
       background: #1a1a1a;
       border: 1px solid #ff33cc;
       box-shadow: 0 0 10px #ff33cc;
       border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    article:hover {
+      transform: scale(1.03);
+    }
+    article img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+    article .content {
+      padding: 15px;
     }
     article h2 {
       color: #ff33cc;
-      margin-bottom: 10px;
-      font-size: 1.5rem;
+      margin: 10px 0;
+      font-size: 1.25rem;
       text-shadow: 0 0 5px #ff33cc;
     }
     article p {
       color: #ccc;
+      font-size: 0.95rem;
     }
     article time {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       color: #999;
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>SkyronTech Nieuws</h1>
+    <h1>ITRumors</h1>
     <p>Geruchten, Lekken & Waarheden</p>
   </header>
   <main class="container">
-    <article>
-      <h2>OpenAI werkt aan eigen browser</h2>
-      <time datetime="2025-04-23">23 april 2025</time>
-      <p>Volgens bronnen zou OpenAI een eigen browser ontwikkelen om beter te integreren met GPT-technologie. Daarmee gaan ze mogelijk de concurrentie aan met Chrome en Edge.</p>
-    </article>
-
-    <article>
-      <h2>Instagram test AI-gegenereerde reacties</h2>
-      <time datetime="2025-04-21">21 april 2025</time>
-      <p>Een nieuwe functie in Instagram stelt voor om via AI een reactie te typen op foto's, gebaseerd op je eerdere gesprekken en likes. Meta wil het breder uitrollen in de zomer.</p>
-    </article>
+    <!-- Artikel 1 -->
+    <a href="https://example.com/article1" target="_blank">
+      <article>
+        <img src="https://via.placeholder.com/600x300" alt="Artikel 1">
+        <div class="content">
+          <h2>OpenAI werkt aan eigen browser</h2>
+          <time datetime="2025-04-23">23 april 2025</time>
+          <p>OpenAI zou een browser bouwen met diepe AI-integratie, gericht op concurrentie met Chrome.</p>
+        </div>
+      </article>
+    </a>
+    <!-- Artikel 2 -->
+    <a href="https://example.com/article2" target="_blank">
+      <article>
+        <img src="https://via.placeholder.com/600x300" alt="Artikel 2">
+        <div class="content">
+          <h2>Instagram test AI-reacties</h2>
+          <time datetime="2025-04-21">21 april 2025</time>
+          <p>AI schrijft nu voor jou reacties gebaseerd op je gedrag. Meta test dit wereldwijd.</p>
+        </div>
+      </article>
+    </a>
+    <!-- Voeg hier nog 10 extra artikelen toe zoals hierboven -->
   </main>
 </body>
 </html>
